@@ -7,6 +7,20 @@ public class RestaurantManager {
     private ArrayList<OrderItem> orders = new ArrayList<>();
     private boolean[] tables = new boolean[10];
 
+    // Pre-loaded default menu
+    public RestaurantManager() {
+        menu.add(new MenuItem(101, "Paneer Butter Masala", "Main Course", 220.00));
+        menu.add(new MenuItem(102, "Dal Makhani", "Main Course", 180.00));
+        menu.add(new MenuItem(103, "Butter Naan", "Breads", 40.00));
+        menu.add(new MenuItem(104, "Veg Biryani", "Rice", 190.00));
+        menu.add(new MenuItem(105, "Veg Spring Rolls", "Starters", 120.00));
+        menu.add(new MenuItem(106, "Chilli Paneer", "Starters", 170.00));
+        menu.add(new MenuItem(107, "Masala Dosa", "South Indian", 110.00));
+        menu.add(new MenuItem(108, "Gulab Jamun", "Dessert", 60.00));
+        menu.add(new MenuItem(109, "Cold Coffee", "Beverages", 90.00));
+        menu.add(new MenuItem(110, "Masala Chai", "Beverages", 30.00));
+    }
+
     public void addItem(MenuItem item) {
         menu.add(item);
         System.out.println("Item added successfully!");
